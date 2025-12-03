@@ -1,64 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kesha Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0d1117;
-      color: white;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      padding: 50px 20px;
-      background: #161b22;
-      border-bottom: 1px solid #30363d;
-    }
-    h1 {
-      color: #58a6ff;
-    }
-    .section {
-      padding: 40px 20px;
-    }
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kesha Portfolio</title>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: #0b0f19;
+    color: #d6e1ff;
+    overflow-x: hidden;
+  }
+
+  /* Неонове світіння */
+  .neon {
+    color: #6c9eff;
+    text-shadow:
+      0 0 5px #6c9eff,
+      0 0 10px #6c9eff,
+      0 0 20px #176aff,
+      0 0 40px #176aff;
+  }
+
+  header {
+    text-align: center;
+    padding: 90px 20px;
+    background: linear-gradient(180deg, #0b0f19 0%, #0f172a 100%);
+  }
+
+  header h1 {
+    font-size: 48px;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 10px #0051ff; }
+    to   { text-shadow: 0 0 25px #0051ff; }
+  }
+
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  h2 {
+    color: #7aa8ff;
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+  }
+
+  /* Кнопки */
+  .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 20px;
+    background: #1a2b52;
+    color: #8db7ff;
+    border: 2px solid #6a9bfd;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #1d4ed8;
+  }
+
+  .btn:hover {
+    background: #0e1a33;
+    box-shadow: 0 0 20px #3b82f6;
+    transform: scale(1.05);
+  }
+
+  /* 3D блок */
+  .card {
+    background: #111827;
+    padding: 25px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 
+      0 0 15px rgba(0, 140, 255, 0.3),
+      inset 0 0 10px rgba(0, 140, 255, 0.2);
+    transform: perspective(600px) rotateX(5deg);
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: perspective(600px) rotateX(0deg) scale(1.02);
+    box-shadow:
+      0 0 25px rgba(0, 140, 255, 0.5),
+      inset 0 0 20px rgba(0, 140, 255, 0.3);
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: #5876a3;
+    margin-top: 40px;
+    font-size: 14px;
+  }
+
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Hi, I'm Kesha 👋</h1>
-  <p>Developer, Crypto Enthusiast & Builder</p>
+  <h1 class="neon">Hi, I'm Kesha 👋</h1>
+  <p>Developer • Crypto Enthusiast • Web3 Explorer</p>
 </header>
 
-<div class="section">
+<section>
   <h2>🚀 About Me</h2>
-  <p>I build bots, tools, scripts and explore Web3 technology.</p>
-</div>
+  <div class="card">
+    <p>I build tools, bots, automations and explore modern crypto/Web3 technologies.</p>
+    <p>Passionate about coding, blockchain and digital innovation.</p>
+  </div>
+</section>
 
-<div class="section">
+<section>
   <h2>📂 My Projects</h2>
-  <p>Check out my GitHub:</p>
-  <a href="https://github.com/keshavadim" target="_blank">github.com/keshavadim</a>
-</div>
+  <div class="card">
+    <p>Check out my GitHub profile for all my projects, scripts and experiments.</p>
+    <a class="btn" href="https://github.com/keshavadim" target="_blank">View GitHub</a>
+  </div>
+</section>
 
-<div class="section">
+<section>
   <h2>📬 Contact</h2>
-  <p>Telegram: <a href="https://t.me/cryptokesha" target="_blank">@cryptokesha</a></p>
-  <p>Twitter: <a href="https://twitter.com/vadim_kesha1" target="_blank">@vadim_kesha1</a></p>
-</div>
+  <div class="card">
+    <p>Telegram: <a class="neon" href="https://t.me/cryptokesha" target="_blank">@cryptokesha</a></p>
+    <p>Twitter: <a class="neon" href="https://twitter.com/vadim_kesha1" target="_blank">@vadim_kesha1</a></p>
+  </div>
+</section>
 
-<footer class="section">
-  <p>Made with ❤️ by Kesha</p>
+<footer>
+  Made with ❤️ & ⚡ by Kesha
 </footer>
 
 </body>
